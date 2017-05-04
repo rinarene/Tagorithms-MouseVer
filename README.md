@@ -1,2 +1,5 @@
 # Tagorithms-2
 
+Unity Version: 5.4.2f2
+
+In Games User Research (GUR), a branch of Human Computer Interaction (HCI) we question how to design games that result in a positive player experience (PX). Game opponents can be a large component of the PX, because they can determine the level of difficulty or challenge provided to the player, as well as, determine the pacing of the game. Games that involve non-player characters or artificially intelligent (AI) characters are challenging to game designers because they do not offer the same level of complexity or strategy a human opponent can offer. Often game enemies will run towards a character in an attack situation causing a consistent, non-varying stream of enemy attacks. Game designers will sometimes add interest to these moments by varying the points that the enemy characters generate, moderating the pace of appearance, or varying the approach. In the presented study, we investigate how varying the enemy movements according to biologically inspired algorithms can add interest to the gameplay.
