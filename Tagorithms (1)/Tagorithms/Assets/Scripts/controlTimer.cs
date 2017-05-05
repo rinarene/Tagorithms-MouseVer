@@ -39,7 +39,7 @@ public class controlTimer : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (timeLeft <= 0) {
+		if (GetComponent<ScoreScript>().health < 0) {
 			//end screen
 			SceneManager.LoadScene ("ControlEnd");
 		}

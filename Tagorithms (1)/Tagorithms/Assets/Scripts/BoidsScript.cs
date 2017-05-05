@@ -6,8 +6,8 @@ public class BoidsScript : MonoBehaviour {
 	public int type = 0;
 	GameObject[] boids;
 	private Vector3 mousePos;
-	public float controlSpeed = 2f;
-	public float flockSpeed = 2f;
+	public float controlSpeed = 1f;
+	public float flockSpeed = 1f;
 	public float neighbourRadius = 70;
 	public float sepRadius = 20;
 	public float aWeight = 0.1f;
