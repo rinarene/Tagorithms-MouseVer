@@ -40,7 +40,11 @@ public class PlayerScript : MonoBehaviour {
 		//is the player touhing the screen
 		if (Input.touchCount > 0) {
             //	mousePos = Camera.main.ScreenToWorldPoint (Input.GetMouseButtonDown(0));
-            mousePos = Input.GetMouseButtonDown (0);
+            while (Input.GetMouseButtonDown(0))
+            {
+                mousePos = Input.mousePosition;
+            }
+                ;
 
 	//		//check is same finger is still touching. if not, set touching to false. 
 	//	if (Input.GetMouseButtonDown ) {
