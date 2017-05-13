@@ -8,9 +8,10 @@ public class fireflyTimer : MonoBehaviour {
 	System.Timers.Timer LeTimer;
 	float timeLeft = 60f;
 	private timerBar barScript;
-	// Use this for initialization
+    private ScoreScript scoreScript;
+    // Use this for initialization
 
-	void elapsed(object sender, ElapsedEventArgs e) {
+    void elapsed(object sender, ElapsedEventArgs e) {
 		//decrease time left (working in 1/5 of a second)
 		timeLeft = timeLeft - 0.2f;
 
@@ -30,15 +31,22 @@ public class fireflyTimer : MonoBehaviour {
 			Debug.Log ("Cannot find 'barScript' script");
 		}
 
-		//Initialize timer with 1/5 second intervals
-		LeTimer = new System.Timers.Timer (200);
+        GameObject scoreObject = GameObject.FindWithTag("Score");
+        if (scoreObject != null)
+        {
+            scoreScript = scoreObject.GetComponent<ScoreScript>();
+        }
+
+        //Initialize timer with 1/5 second intervals
+        LeTimer = new System.Timers.Timer (200);
 		LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
 
 		LeTimer.Start();
 	}
 
 	void Update () {
-		if (timeLeft <= 0) {
+        if (timeLeft <= 0 || scoreScript.health <= 0)
+        {
 			//end screen
 			SceneManager.LoadScene ("FireflyEnd");
 		}

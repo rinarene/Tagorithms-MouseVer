@@ -35,9 +35,9 @@ public class fireflyCountdown : MonoBehaviour {
 		GameObject pObject = GameObject.FindWithTag ("Player");
 		if (pObject != null)
 		{
-			pObject.GetComponent <PlayerScript>().enabled = true;
-			pObject.GetComponent <PlayerScript> ().type = this.GetComponent<BoidsScript> ().type;
-		}
+            pObject.GetComponent<PlayerScript>().enabled = true;
+            pObject.GetComponent<PlayerScript>().type = this.GetComponent<BoidsScript>().type;
+        }
 		if (pObject == null)
 		{
 			Debug.Log ("Cannot find 'Player' script");
