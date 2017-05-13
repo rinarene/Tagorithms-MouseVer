@@ -77,19 +77,20 @@ public class PlayerScript : MonoBehaviour {
 
 		scoreScript.UpdateScore ();
 
-		//switch (type) {
-		//case 0:
-		//	data.UpdateControl (scoreScript.score);
-		//	break;
-		//case 1:
-		//	data.UpdateFlock (scoreScript.score);
-		//	break;
-		//case 2:
-		//	data.UpdateSwarm (scoreScript.score);
-		//	break;
-		//case 3:
-		//	data.UpdateFirefly (scoreScript.score);
-		//	break;
-		//}
-	}
+        switch (type)
+        {
+            case 0:
+                data.UpdateControl(scoreScript.score);
+                break;
+            case 1:
+                data.UpdateFlock(scoreScript.score);
+                break;
+            case 2:
+                data.UpdateSwarm(scoreScript.score);
+                break;
+            case 3:
+                data.UpdateFirefly(scoreScript.score);
+                break;
+        }
+    }
 }

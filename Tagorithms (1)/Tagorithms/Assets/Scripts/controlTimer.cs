@@ -8,6 +8,7 @@ public class controlTimer : MonoBehaviour {
 	System.Timers.Timer LeTimer;
 	float timeLeft = 60f;
 	private timerBar barScript;
+    private ScoreScript scoreScript;
 
 	void elapsed(object sender, ElapsedEventArgs e) {
 		//decrease time left (working in 1/5 of a second)
@@ -29,8 +30,14 @@ public class controlTimer : MonoBehaviour {
 			Debug.Log ("Cannot find 'barScript' script");
 		}
 
-		//Initialize timer with 1/5 second intervals
-		LeTimer = new System.Timers.Timer (200);
+        GameObject scoreObject = GameObject.FindWithTag("Score");
+        if (scoreObject != null)
+        {
+            scoreScript = scoreObject.GetComponent<ScoreScript>();
+        }
+
+        //Initialize timer with 1/5 second intervals
+        LeTimer = new System.Timers.Timer (200);
 		LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
 		
 		LeTimer.Start();
@@ -39,7 +46,7 @@ public class controlTimer : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (GetComponent<ScoreScript>().health < 0) {
+		if (timeLeft <= 0 || scoreScript.health <= 0) {
 			//end screen
 			SceneManager.LoadScene ("ControlEnd");
 		}
