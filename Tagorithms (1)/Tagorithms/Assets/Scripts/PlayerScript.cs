@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour {
     void Update()
     {
         mousePos = Input.mousePosition;
-        
+
         Vector3 pos = Camera.main.ScreenToWorldPoint(mousePos);
         pos.z = transform.position.z;
         //transform.position = pos;
@@ -70,12 +70,23 @@ public class PlayerScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		//reset the boid to a random location
-		Vector3 pos = Camera.main.ScreenToWorldPoint (new Vector3 (Random.Range (0.0F, Screen.width), Random.Range (0.0F, Screen.height), 0));
-		pos.z = 0f;
-		coll.transform.position = pos;
-		coll.GetComponent<Rigidbody2D> ().velocity = new Vector3 (Random.Range (-1.0F, 1.0F), Random.Range (-1.0F, 1.0F), Random.Range (0.0F, 1.0F));
+		        //array that contains all screen dimensions.
+		        int[] sizeArr = { Screen.width, Screen.height, 0, 0 };
+		        //generates random integer
+		        System.Random rnd = new System.Random();
 
-		scoreScript.UpdateScore ();
+		       //generates random width and height
+		        int widthPos = rnd.Next(0, 3);
+		        int heightPos = rnd.Next(0, 3);
+
+		       //resets the boid to a corner of the screen
+		        Vector3 pos = Camera.main.ScreenToWorldPoint(new Vector3(sizeArr[widthPos], sizeArr[heightPos]));
+
+		       pos.z = 0f;
+		        coll.transform.position = pos;
+		        coll.GetComponent<Rigidbody2D>().velocity = new Vector3(Random.Range(-1.0F, 1.0F), Random.Range(-1.0F, 1.0F), Random.Range(0.0F, 1.0F));
+
+		       scoreScript.UpdateScore();
 
         switch (type)
         {
