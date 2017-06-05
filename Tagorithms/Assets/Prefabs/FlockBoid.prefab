@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5025600}
   - component: {fileID: 6183222}
   - component: {fileID: 11458556}
-  - component: {fileID: 114814604860581946}
   m_Layer: 8
   m_Name: FlockBoid
   m_TagString: FlockBoid
@@ -198,17 +197,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 135940}
   m_IsPrefabParent: 1
---- !u!114 &114814604860581946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7734ddc422323240ba4d75b3b2493da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnTime: 5
-  respawnRef: 5
-  randAddRespawn: 5

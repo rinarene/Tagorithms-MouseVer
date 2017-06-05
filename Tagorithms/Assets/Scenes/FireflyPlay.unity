@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &125700355 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -144,6 +145,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1001 &142276121
 Prefab:
   m_ObjectHideFlags: 0
@@ -245,6 +247,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &231901061
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +356,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &307531522 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -371,6 +375,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &321670565
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,9 +602,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7734ddc422323240ba4d75b3b2493da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 5
-  respawnRef: 5
+  respawnTime: 7
+  respawnRef: 7
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &518285467 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -618,6 +624,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &543732649
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +763,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1001 &666468376
 Prefab:
   m_ObjectHideFlags: 0
@@ -1023,17 +1031,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
---- !u!114 &706706766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 706706760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b59312a0f59631147bb51faab37e5cff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  algoType: 1
 --- !u!1 &772913691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1222,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1001 &803576856
 Prefab:
   m_ObjectHideFlags: 0
@@ -1487,7 +1486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.99997, y: -139.99998}
+  m_AnchoredPosition: {x: -369.99997, y: -190}
   m_SizeDelta: {x: 55, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872581463
@@ -1822,6 +1821,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &1037591801 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -1840,6 +1840,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &1067587590 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -1858,6 +1859,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &1252322913 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -1876,6 +1878,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1001 &1252364487
 Prefab:
   m_ObjectHideFlags: 0
@@ -2075,7 +2078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 29.999979, y: 190}
+  m_AnchoredPosition: {x: 30, y: 190}
   m_SizeDelta: {x: 20, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290483897
@@ -2224,6 +2227,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1001 &1377520454
 Prefab:
   m_ObjectHideFlags: 0
@@ -2477,6 +2481,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &1574854425 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -2495,6 +2500,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1001 &1655705933
 Prefab:
   m_ObjectHideFlags: 0
@@ -2985,6 +2991,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1001 &1849647281
 Prefab:
   m_ObjectHideFlags: 0
@@ -3281,6 +3288,7 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1
 --- !u!1 &2093480353 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135940, guid: 0462f3bdec56c4e5db997350124e8f76, type: 2}
@@ -3299,3 +3307,4 @@ MonoBehaviour:
   respawnTime: 5
   respawnRef: 5
   randAddRespawn: 5
+  algoType: 1

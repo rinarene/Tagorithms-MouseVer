@@ -46,7 +46,7 @@ public class BoidsScript : MonoBehaviour {
 
 	void Start () {
 		//player
-		GameObject pObject = GameObject.FindWithTag ("Player");
+		GameObject pObject = GameObject.Find("Player");
 		if (pObject != null)
 		{
 			player = pObject.GetComponent <PlayerScript>();

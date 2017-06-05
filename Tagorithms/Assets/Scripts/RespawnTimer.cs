@@ -11,29 +11,56 @@ public class RespawnTimer : MonoBehaviour
     private int randAdd;
     private bool respawnBool = true;
     private int heightPos;
+    public int algoType = 1;
+    GameSettings Settings;
 
     // respawnRef variable for resetting variable
 
 
     void Start()
     {
-        // random respawn intiate, add onto respawnTime so more natural respawn
+        //  Accesses AppliedSettings variables
+        Settings = GameObject.Find("AppliedSettings").GetComponent<GameSettings>();
+        switch (algoType)
+        {
+            // red algo
+            case 1:
+                respawnTime = Settings.rSpawn;
+                respawnRef = Settings.rSpawn;
+                randAddRespawn = Settings.rRand;
+                break;
+            // blue algo
+            case 2:
+                respawnTime = Settings.bSpawn;
+                respawnRef = Settings.bSpawn;
+                randAddRespawn = Settings.bRand;
+                break;
 
-        randAdd = Random.Range(1, randAddRespawn);
+            // green algo
+            case 3:
+                respawnTime = Settings.gSpawn;
+                respawnRef = Settings.gSpawn;
+                randAddRespawn = Settings.gRand;
+                break;
+
+            // yellow algo
+            case 4:
+                respawnTime = Settings.ySpawn;
+                respawnRef = Settings.ySpawn;
+                randAddRespawn = Settings.yRand;
+                break;
+        }
+        //Settings.GetComponent<>
+        // random respawn intiate, add onto respawnTime so more natural respawn        
+        randAdd = Random.Range(1, randAddRespawn + 1);
         respawnTime += randAdd;
         respawnRef += randAdd;
         
     }
 
-    //IEnumerator LagForCountdown()
-    //{
-
-    //}
-
-    // Update is called once per frame
 
     void Update()
-    {
+    {       
         Vector3 pos = new Vector3();
         // select player gameObject
         GameObject player = GameObject.Find("Player");

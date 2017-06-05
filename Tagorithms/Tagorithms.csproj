@@ -79,8 +79,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BoidsScript.cs" />
+    <Compile Include="Assets\Scripts\FileLoc.cs" />
+    <Compile Include="Assets\Scripts\GameSettings.cs" />
     <Compile Include="Assets\Scripts\InFrameScript.cs" />
+    <Compile Include="Assets\Scripts\InitialSettings.cs" />
+    <Compile Include="Assets\Scripts\MenuToSettings.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\Randomize.cs" />
     <Compile Include="Assets\Scripts\RespawnTimer.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\TextOutput.cs" />

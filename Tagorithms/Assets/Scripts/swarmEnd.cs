@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class swarmEnd : MonoBehaviour {
 
-	public void onClick(){
-		SceneManager.LoadScene ("FireflyStart");
-	}
+    public void onClick()
+    {
+        SceneManager.LoadScene("InBetween");
+    }
 }

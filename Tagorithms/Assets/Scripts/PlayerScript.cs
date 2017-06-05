@@ -7,10 +7,8 @@ public class PlayerScript : MonoBehaviour {
 	private ScoreScript scoreScript;
 	private mainData data;
 	public int type;
-
-	private int touching = 1;
+    
 	private float touchId = 1.1f;
-
 	void Start () {
 		GameObject scoreObject = GameObject.FindWithTag ("Score");
 		if (scoreObject != null)

@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class flockEnd : MonoBehaviour {
 
-	public void onClick(){
-		SceneManager.LoadScene ("SwarmStart");
-	}
+    public void onClick()
+    {
+        SceneManager.LoadScene("InBetween");
+    }
 }

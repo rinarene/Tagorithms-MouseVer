@@ -19,5 +19,8 @@ public class restart : MonoBehaviour {
 		}
 		data.reset ();
 		SceneManager.LoadScene ("Menu");
+
+        DestroyObject(GameObject.Find("Randomizer"));
+            
 	}
 }

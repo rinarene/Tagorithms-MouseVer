@@ -1,0 +1,18 @@
+
+Tagorithms Reference
+**************************************************************************************************************************************************************************
+File Output: Must specify file location of output file in settings (cog wheel in menu). 
+   	     I.e. C:\Users\KFung\Desktop\FileLoc.txt (the file with ext. must be specified, to find location of your file right click your text file and select properties
+
+Spawn Time: If the enemy has not touched the player for a certain amount of time it will respawn. 
+	    This setting will allow you to adjust the time it takes for this respawn to happen
+
+Spawn Random Add Time: In order for the respawn to feel more natural time has been added from a random range of times (1 - RandomAdd (inclusive)). 
+		       This setting will allow you to adjust the range the random number will be selected from. 
+
+**** Everytime Tagorithms is started up it needs a file output location. 
+     To access this press the cog on the top right corner of the menu.
+     After all your settings you must click apply.
+     Press back to return to the menu. 
+     The program is ready to go.
+
