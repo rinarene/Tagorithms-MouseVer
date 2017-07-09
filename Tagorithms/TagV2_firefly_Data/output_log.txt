@@ -1,0 +1,145 @@
+Mono path[0] = 'D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/TagV2_firefly_Data/Managed'
+Mono path[1] = 'D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/TagV2_firefly_Data/Mono'
+Mono config path = 'D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/TagV2_firefly_Data/Mono/etc'
+PlayerConnection initialized from D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/TagV2_firefly_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55146
+Multi-casting "[IP] 10.0.0.19 [Port] 55146 [Flags] 2 [Guid] 3994016653 [EditorId] 3653294412 [Version] 1048832 [Id] WindowsPlayer(DESKTOP-2TN61QC) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55146]
+PlayerConnection already initialized - listening to [0.0.0.0:55146]
+Player data archive not found at `D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/TagV2_firefly_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   NVIDIA
+    VRAM:     8119 MB
+    Driver:   22.21.13.8205
+Default GameObject Tag: Player already registered
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.072 seconds
+Platform assembly: D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\TagV2_firefly_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.776642 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2c68 -> priority: 1 
+  Thread -> id: 2c64 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.883480 ms
+System memory in use before: 19.0 MB.
+System memory in use after: 19.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 520.
+Total: 0.231426 ms (FindLiveObjects: 0.028624 ms CreateObjectMapping: 0.011611 ms MarkObjects: 0.162565 ms  DeleteObjects: 0.015392 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at RespawnTimer.Start () [0x0000c] in D:\Lukas\Documents\Kanada\Tagorithms-MouseVer\Tagorithms\Assets\Scripts\RespawnTimer.cs:23 
+ 
+(Filename: D:/Lukas/Documents/Kanada/Tagorithms-MouseVer/Tagorithms/Assets/Scripts/RespawnTimer.cs Line: 23)
+

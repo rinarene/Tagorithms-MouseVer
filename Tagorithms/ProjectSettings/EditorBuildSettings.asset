@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: bb5277838a0ec4bcfade2a6cd624ffed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Settings.unity
     guid: e3dcd0963cc2db84b8a639a2e6c60289
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/InBetween.unity
     guid: 2d95e4968f46c394b9eac3f777414192
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ControlStart.unity
     guid: e75bed8358ca24cc9984fe6cf14381e3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ControlPlay.unity
     guid: add6e2f3321d3454a8cb8570d18faff1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ControlEnd.unity
     guid: 9a085114e73be4ecb90c7ab47746afa3
   - enabled: 1
@@ -32,24 +32,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FireflyEnd.unity
     guid: c2e981b88064c4843a070c62b51d02b4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FlockStart.unity
-    guid: 00000000000000000000000000000000
-  - enabled: 1
+    guid: 0dd011f64dfa34f9b8ab98580e98bc5d
+  - enabled: 0
     path: Assets/Scenes/FlockPlay.unity
     guid: 2e70ada8e6e6d4828af9fcf0057dd126
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FlockEnd.unity
     guid: 798e76e43555648f986595d4cb325477
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SwarmStart.unity
     guid: c904c81daeb7a488a9a564d89a1e9921
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SwarmPlay.unity
     guid: 9c7823d21248947c9b45dd4ff52c8330
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SwarmEnd.unity
     guid: 1fad5bd04054b47d1b67a8e36f289e5a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/End.unity
     guid: 68249407e854b4ab8a38c4cd206cc6b6
