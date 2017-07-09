@@ -8,9 +8,11 @@ public class BoidsScript : MonoBehaviour {
 	private Vector3 mousePos;
 	public float controlSpeed = 1f;
 	public float flockSpeed = 1f;
-	public float neighbourRadius = 70;
-	public float sepRadius = 20;
-	public float aWeight = 0.1f;
+    //public float neighbourRadius = 70;
+    //public float sepRadius = 20;
+    public float neighbourRadius = 3.0f;
+    public float sepRadius = 1.0f;
+    public float aWeight = 0.1f;
 	public float cWeight = 0.1f;
 	public float sWeight = 0.1f;
 	public float dWeight = 0.1f;
@@ -115,19 +117,26 @@ public class BoidsScript : MonoBehaviour {
 				sepN = 0;
 				distN = new Vector3 (0f, 0f, 0f);
 				Vector3 iRot = Vector3.Normalize (mousePos - iLoc);
+                Vector3 iRot2 = Vector3.Normalize(mousePos - boids[i].transform.position);
 				for (int j = 0; j < boids.Length; j++) {
 					if (j != i) { //if not our current boid
-						//check if its close enought to be a neightbour
-						iLoc = Camera.main.WorldToScreenPoint (boids [i].transform.position);
-						jLoc = Camera.main.WorldToScreenPoint (boids [j].transform.position);
-
-						a1 = boids [i].transform.rotation.eulerAngles.z;
+                                  //check if its close enought to be a neightbour
+                      //iLoc = Camera.main.WorldToScreenPoint (boids [i].transform.position);
+                        jLoc = boids [j].transform.position;
+                        iLoc = boids [i].transform.position;
+                                  //jLoc = Camera.main.WorldToScreenPoint (boids [j].transform.position);
+                            a1 = boids [i].transform.rotation.eulerAngles.z;
 						jRot = Vector3.Normalize (jLoc - iLoc);
-						a2 = Vector2.Angle (new Vector2 (jRot.y, jRot.x),new Vector2 (iRot.y, iRot.x));
+                        Vector3 jRot2 = Vector3.Normalize(boids[i].transform.position - boids[j].transform.position);
+                        float a22 = Vector2.Angle(new Vector2(jRot2.y, jRot2.x), new Vector2(iRot2.y, iRot2.x));
+
+                        a2 = Vector2.Angle (new Vector2 (jRot.y, jRot.x),new Vector2 (iRot.y, iRot.x));
+                        a2 = a22;
 						if (a1 < 0) {a1 = 360 + a1;}
 						if (a2 < 0) {a2 = 360 + a2;}
 						if (Mathf.Abs (Mathf.DeltaAngle (a1, a2)) < 60) {
-							dist = Vector3.Distance (iLoc, jLoc);
+                                //dist = Vector3.Distance (iLoc, jLoc);
+                            dist = Vector3.Distance(boids[i].transform.position, boids[j].transform.position);
 							if (dist < neighbourRadius) {
 								neighbours++;
 
@@ -231,12 +240,17 @@ public class BoidsScript : MonoBehaviour {
 				neighbours = 0;
 				for (int j = 0; j < boids.Length; j++) {
 					if (j != i) { //if not our current boid
-						//check if its close enought to be a neightbour
-						iLoc = Camera.main.WorldToScreenPoint (boids [i].transform.position);
-						jLoc = Camera.main.WorldToScreenPoint (boids [j].transform.position);
-						dist = Vector3.Distance (iLoc, jLoc);
+                                  //check if its close enought to be a neightbour
+                                  iLoc = Camera.main.WorldToScreenPoint (boids [i].transform.position);
+                                  jLoc = Camera.main.WorldToScreenPoint (boids [j].transform.position);
 
-						if (dist < neighbourRadius) {
+                            //iLoc = boids[i].transform.position;
+                            //jLoc = boids[j].transform.position;
+                            //dist = Vector3.Distance (iLoc, jLoc);
+                            dist = Vector3.Distance(boids[i].transform.position, boids[j].transform.position);
+
+
+                        if ( dist < neighbourRadius) {
 							//add neighbours position to posN
 							//is j closer to the player than i?
 							if (dists [j,2] < dists [i,2]) {
@@ -259,7 +273,7 @@ public class BoidsScript : MonoBehaviour {
 
 				//set boid's new velocity
 				Vector3 v = boids [i].GetComponent<Rigidbody2D> ().velocity;
-				boids [i].GetComponent<Rigidbody2D> ().velocity = 6*Vector3.Normalize(0.4f*v + 0.6f*newVel);
+				boids [i].GetComponent<Rigidbody2D> ().velocity = 6*Vector3.Normalize(0.6f*v + 0.3f*newVel);
 
 				//rotation
 				angle = Mathf.Atan2(boids[i].GetComponent<Rigidbody2D> ().velocity.y, boids [i].GetComponent<Rigidbody2D> ().velocity.x) * Mathf.Rad2Deg;
@@ -268,5 +282,15 @@ public class BoidsScript : MonoBehaviour {
 			break;
 		}
 	}
+
+    void firefly()
+    {
+        for (int i = 0; i < boids.Length; i++)
+        {
+            dists[i, 0] = boids[i].transform.position.x;
+            dists[i, 1] = boids[i].transform.position.y;
+            dists[i, 2] = Vector3.Distance(mousePos, boids[i].transform.position);
+        }
+    }
 
 }
