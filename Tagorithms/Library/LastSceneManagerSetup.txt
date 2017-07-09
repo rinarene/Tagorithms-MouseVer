@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/FireflyPlay.unity
+- path: Assets/Scenes/SwarmPlay.unity
   isLoaded: 1
   isActive: 1
