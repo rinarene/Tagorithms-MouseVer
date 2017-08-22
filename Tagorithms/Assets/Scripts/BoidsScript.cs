@@ -6,19 +6,26 @@ public class BoidsScript : MonoBehaviour {
 	public int type = 0;
 	GameObject[] boids;
 	private Vector3 mousePos;
-	public float controlSpeed = 1f;
-	public float flockSpeed = 1f;
-    //public float neighbourRadius = 70;
-    //public float sepRadius = 20;
     public float neighbourRadius = 3.0f;
+    public float swarmSpeed = 6.0f;
     public float sepRadius = 1.0f;
     public float aWeight = 0.1f;
 	public float cWeight = 0.1f;
 	public float sWeight = 0.1f;
 	public float dWeight = 0.1f;
+    //fwdWeight is the current forward vector of the current boid
+    public float fwdWeight = 0.4f;
+    //strength of private vector and global vector
+    public float vecPStr = 2f;
+    public float vecGStr = 2f;
+    //radius of collider of boids
+    public float boidRad = 25f;
+    //set amount of boids
+    public int maxBoid = 20;
 
-	//flocking
-	private Vector3 dir = new Vector3 (0, 0, 0);
+
+    //flocking
+    private Vector3 dir = new Vector3 (0, 0, 0);
 	private int neighbours = 0;
 	private int sepN = 0;
 	private Vector3 alignV = new Vector3 (0, 0, 0);
@@ -69,6 +76,9 @@ public class BoidsScript : MonoBehaviour {
 			pos.z = 0f;
 			boids [i].transform.position = pos;
 			boids [i].GetComponent<Rigidbody2D> ().velocity = new Vector3 (Random.Range (-1.0F, 1.0F), Random.Range (-1.0F, 1.0F), 0);
+
+            //adjust radius of colliders between boids
+            boids[i].GetComponentInChildren<CircleCollider2D>().radius = boidRad;
 
 			if (type == 2) { //swarming
 				//set initial bestPos for each boid to their current pos
@@ -187,6 +197,7 @@ public class BoidsScript : MonoBehaviour {
 			}
 			break;
 		case 2: //swarming
+            //TODO: need ratio of average vecPBest to vecGBest
 			//update all the distances in bestPos
 			for (int i = 0; i < boids.Length; i++) {
 				bestPos [i, 2] = Vector3.Distance (mousePos, new Vector3 (bestPos [i, 0], bestPos [i, 1], 0f));
@@ -218,7 +229,10 @@ public class BoidsScript : MonoBehaviour {
 				Vector3 v = boids [i].GetComponent<Rigidbody2D> ().velocity;
 				Vector3 vecPbest = new Vector3 (bestPos [i, 0] - boids [i].transform.position.x, bestPos [i, 1] - boids [i].transform.position.y, 0f);
 				Vector3 vecGbest = new Vector3 (bestPos [closest, 0] - boids [i].transform.position.x, bestPos [closest, 1] - boids [i].transform.position.y, 0f);
-				boids [i].GetComponent<Rigidbody2D> ().velocity = 6*Vector3.Normalize(0.4f*v + 0.6f*(2 * Random.Range (0.0F, 1.0F) * vecPbest + 2 * Random.Range (0.0F, 1.0F) * vecGbest));
+                //6 is speed, adjustable global best and personal best
+                Vector3 vecAdj = Vector3.Normalize(fwdWeight * v + (1-fwdWeight) * (vecPStr * Random.Range(0.0F, 1.0F) * vecPbest + vecGStr * Random.Range(0.0F, 1.0F) * vecGbest));
+
+                boids [i].GetComponent<Rigidbody2D> ().velocity = swarmSpeed * vecAdj;
 
 				//rotation
 				angle = Mathf.Atan2(boids[i].GetComponent<Rigidbody2D> ().velocity.y, boids [i].GetComponent<Rigidbody2D> ().velocity.x) * Mathf.Rad2Deg;

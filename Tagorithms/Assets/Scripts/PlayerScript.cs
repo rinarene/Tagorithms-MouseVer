@@ -67,10 +67,10 @@ public class PlayerScript : MonoBehaviour {
     }
 
 	void OnTriggerEnter2D(Collider2D coll) {
-        
+
         Vector3 pos = new Vector3();
         int caseSwitch = Random.Range(1, 5);
-        
+
         // spawns randomly along edges of screen
         switch (caseSwitch)
         {
@@ -92,10 +92,10 @@ public class PlayerScript : MonoBehaviour {
         }
 
         pos.z = 0f;
-		coll.transform.position = pos;
-		coll.GetComponent<Rigidbody2D>().velocity = new Vector3(Random.Range(-1.0F, 1.0F), Random.Range(-1.0F, 1.0F), Random.Range(0.0F, 1.0F));
-        
-		scoreScript.UpdateScore();
+        coll.transform.position = pos;
+        coll.GetComponent<Rigidbody2D>().velocity = new Vector3(Random.Range(-1.0F, 1.0F), Random.Range(-1.0F, 1.0F), Random.Range(0.0F, 1.0F));
+
+        scoreScript.UpdateScore();
 
 
         switch (type)
@@ -114,4 +114,5 @@ public class PlayerScript : MonoBehaviour {
                 break;
         }
     }
+
 }
