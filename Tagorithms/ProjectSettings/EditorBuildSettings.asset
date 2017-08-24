@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/InBetween.unity
     guid: 2d95e4968f46c394b9eac3f777414192
   - enabled: 1
+    path: Assets/Scenes/Questions.unity
+    guid: 6a25f086a7618f64bb4241821a35f159
+  - enabled: 1
     path: Assets/Scenes/ControlStart.unity
     guid: e75bed8358ca24cc9984fe6cf14381e3
   - enabled: 1
@@ -53,3 +56,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 68249407e854b4ab8a38c4cd206cc6b6
+  - enabled: 1
+    path: Assets/Scenes/EndMTurkNumber.unity
+    guid: 00000000000000000000000000000000

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 using UnityEngine.UI;
 using System.IO;
@@ -8,6 +9,8 @@ using System.IO;
 
 
 public class QuestionManager : MonoBehaviour {
+
+    playButton play;
 
 	struct Question{
 		public Question(uint number_, string text_)
@@ -45,6 +48,8 @@ public class QuestionManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        play = GameObject.Find("Play").GetComponent<playButton>();
 
 		GameObject dataObject = GameObject.FindWithTag("Main");
 		if (dataObject != null)
@@ -135,7 +140,7 @@ public class QuestionManager : MonoBehaviour {
 		} else 
 		{
 			WriteQuestionFile (filename);
-			// Todo load next Scene
+            play.onClick();
 		}
 
 	}
