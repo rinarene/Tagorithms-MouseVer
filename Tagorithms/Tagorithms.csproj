@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AnimationScript.cs" />
+    <Compile Include="Assets\QuestionManager.cs" />
     <Compile Include="Assets\Scripts\BoidsScript.cs" />
     <Compile Include="Assets\Scripts\FileLoc.cs" />
     <Compile Include="Assets\Scripts\GameSettings.cs" />

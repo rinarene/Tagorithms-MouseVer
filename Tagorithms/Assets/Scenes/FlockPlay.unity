@@ -108,144 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &21199125
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (11)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &23898027
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (15)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &59563220
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (14)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &64666034
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,98 +176,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 64666034}
---- !u!1001 &121032169
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 7.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (9)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &191233830
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 4.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (20)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &321670565
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &356812097
 GameObject:
@@ -618,94 +388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
---- !u!1001 &522231236
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (16)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &531930400
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &543732649
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +506,7 @@ Transform:
   - {fileID: 1676213012}
   - {fileID: 2059941069}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772913691
 GameObject:
@@ -856,7 +538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &772913693
 MonoBehaviour:
@@ -884,6 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b5d8b22dd324c729b3adbaf498a684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeTest: 5
 --- !u!114 &772913695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,6 +602,7 @@ MonoBehaviour:
   vecGStr: 2
   boidRad: 20
   maxBoid: 20
+  prefab: {fileID: 4589180695876500, guid: 50ee5780319a24f45b24619933b38af1, type: 2}
 --- !u!1 &835769497
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,52 +668,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &991484238
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (17)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1007590998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,144 +758,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007590998}
---- !u!1001 &1156108635
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (18)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1240135959
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -4.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (6)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1254235850
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -3.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1264757165
 Prefab:
   m_ObjectHideFlags: 0
@@ -1362,52 +862,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba1307b7aca6ae54382ff79a8d850217, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1323141006
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (7)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!224 &1352682943 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224805001977218498, guid: ba1307b7aca6ae54382ff79a8d850217,
@@ -1419,52 +873,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1264757165}
   m_Script: {fileID: 11500000, guid: 3eaf124aa3a4fe74b8ab1ca72f536c45, type: 3}
---- !u!1001 &1367993184
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 7.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (19)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1418049923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,52 +943,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
---- !u!1001 &1422710739
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -3.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (8)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1676213011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,98 +971,6 @@ Transform:
   m_Father: {fileID: 597476593}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1682734997
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (10)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1710676991
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (12)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1719605826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,59 +1062,13 @@ RectTransform:
   - {fileID: 2005674456}
   - {fileID: 1352682943}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1744896491
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -7.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1810843858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,52 +1098,6 @@ Transform:
   m_Father: {fileID: 597476593}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1983737789
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -4.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 4.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2005674455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,52 +1166,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2005674455}
---- !u!1001 &2021796934
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -7.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2059941068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,49 +1276,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2113276001}
---- !u!1001 &2116265794
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25881895
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189789043271850, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738776105883974, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-      propertyPath: m_Name
-      value: DragonFly (13)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c0060d6b32cca594fbe9079bff3b2ce6, type: 2}
-  m_IsPrefabParent: 0
