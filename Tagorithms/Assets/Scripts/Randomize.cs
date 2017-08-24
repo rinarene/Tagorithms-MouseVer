@@ -68,6 +68,7 @@ public class Randomize : MonoBehaviour {
         switch (curLevel)
         {
             //all the even cases are for flocking, odd are swarming
+            //FLOCKING SETTINGS
             case 0:
                 allignW = 0.6f;
                 cohW = 0.2f;
@@ -131,7 +132,8 @@ public class Randomize : MonoBehaviour {
                 dirW = 0.5f;
                 maxBoid = 20;
                 break;
-
+            
+            //SWARMING SETTINGS
             case 1:
                 fwdW = 0.5f;
                 vecPStr = 2;
@@ -188,10 +190,6 @@ public class Randomize : MonoBehaviour {
                 boidRad = 21;
                 maxBoid = 20;
                 break;
-
-
-
-
         }
     }
 }

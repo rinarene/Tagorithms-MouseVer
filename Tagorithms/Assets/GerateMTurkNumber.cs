@@ -13,6 +13,11 @@ public class GerateMTurkNumber : MonoBehaviour {
 		return MTurkGerationNumber;
 	}
 
+    public static string getFileName()
+    {
+        return getMTurkNumber().ToString() + ".csv";
+    }
+
 	// Use this for initialization
 	void Start () {
 	}

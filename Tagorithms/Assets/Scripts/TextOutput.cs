@@ -6,14 +6,12 @@ using System.IO;
 public class TextOutput : MonoBehaviour {
 
     private mainData data;
-    GameSettings Settings;
+    private Randomize r;
 
 
     void Start()
     {
-        Settings = GameObject.Find("AppliedSettings").GetComponent<GameSettings>();
-
-        Debug.Log(Settings.fileLoc);
+        r = GameObject.Find("Randomizer").GetComponent<Randomize>();
 
         GameObject dataObject = GameObject.FindWithTag("Main");
         if (dataObject != null)
@@ -25,13 +23,21 @@ public class TextOutput : MonoBehaviour {
             Debug.Log("Cannot find 'mainData' script");
         }
        
-        using (StreamWriter sw = File.AppendText(Settings.fileLoc))
+        
+    }
+    
+    public void Record()
+    {
+        using (StreamWriter sw = File.AppendText(GerateMTurkNumber.getFileName()))
         {
-            sw.WriteLine("blue,{0}", data.scoreControl);
-            sw.WriteLine("green,{0}", data.scoreFlock);
-            sw.WriteLine("yellow,{0}", data.scoreSwarm);
-            sw.WriteLine("red,{0}", data.scoreFirefly);
+            sw.WriteLine("flockScore,{0},flockCondition,{1},{2},{3},{4},{5}", data.scoreFlock, r.allignW, r.cohW, r.sepW, r.dirW, r.maxBoid);
+            sw.WriteLine("swarmScore,{0},swarmCondition,{1},{2},{3},{4},{5}", data.scoreSwarm, r.fwdW, r.vecPStr, r.vecGStr, r.boidRad, r.maxBoid);
             sw.WriteLine();
+            sw.Close();
         }
-    }	
+
+        data.scoreFlock = 0;
+        data.scoreSwarm = 0;
+
+    }
 }

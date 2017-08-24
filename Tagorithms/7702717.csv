@@ -1,0 +1,17 @@
+flockScore,25,flockCondition,0.6,0.2,0.4,0.5,20
+swarmScore,0,swarmCondition,0,0,0,0,20
+
+Question
+3,The level was easy,4
+5,The enemies were predictable,4
+4,The enemies acted "tricky" or "strategic",4
+2,The level was difficult,4
+1,The level was fun,4
+
+Question
+3,The level was easy,4
+1,The level was fun,4
+4,The enemies acted "tricky" or "strategic",4
+5,The enemies were predictable,4
+2,The level was difficult,4
+

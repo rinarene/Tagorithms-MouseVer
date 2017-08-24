@@ -139,7 +139,7 @@ public class QuestionManager : MonoBehaviour {
 			questionText.text = questions [activeQuestion].text;
 		} else 
 		{
-			WriteQuestionFile (filename);
+			WriteQuestionFile (GerateMTurkNumber.getFileName());
             play.onClick();
 		}
 
