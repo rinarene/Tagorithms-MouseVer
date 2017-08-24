@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AnimationScript.cs" />
+    <Compile Include="Assets\GerateMTurkNumber.cs" />
     <Compile Include="Assets\QuestionManager.cs" />
     <Compile Include="Assets\Scripts\BoidsScript.cs" />
     <Compile Include="Assets\Scripts\FileLoc.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\Randomize.cs" />
     <Compile Include="Assets\Scripts\RespawnTimer.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
+    <Compile Include="Assets\Scripts\ShowMTurkNumber.cs" />
     <Compile Include="Assets\Scripts\TextOutput.cs" />
     <Compile Include="Assets\Scripts\controlCountdown.cs" />
     <Compile Include="Assets\Scripts\controlEnd.cs" />
