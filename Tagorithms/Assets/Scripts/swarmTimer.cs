@@ -7,12 +7,13 @@ public class swarmTimer : MonoBehaviour {
 
 	System.Timers.Timer LeTimer;
 	float timeLeft = 60f;
+    public float timeTest = 0.2f;
 	private timerBar barScript;
     private ScoreScript scoreScript;
 
     void elapsed(object sender, ElapsedEventArgs e) {
 		//decrease time left (working in 1/5 of a second)
-		timeLeft = timeLeft - 0.2f;
+		timeLeft = timeLeft - timeTest;
 
 		//update time bar
 		barScript.percent = timeLeft/60f;

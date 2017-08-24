@@ -22,6 +22,10 @@ public class BoidsScript : MonoBehaviour {
     public float boidRad = 25f;
     //set amount of boids
     public int maxBoid = 20;
+    //prefab
+    public Transform prefab;
+    
+    Randomize r;
 
 
     //flocking
@@ -64,13 +68,26 @@ public class BoidsScript : MonoBehaviour {
 		{
 			Debug.Log ("Cannot find 'Player' script");
 		}
+        
 
-		boids = GameObject.FindGameObjectsWithTag ("FlockBoid");
+        r = GameObject.Find("Randomizer").GetComponent<Randomize>();
+        //grab settings
+        aWeight = r.allignW;
+        cWeight = r.cohW;
+        sWeight = r.sepW;
+        dWeight = r.dirW;
+        maxBoid = r.maxBoid;
+
+
+        Spawn();
+        boids = GameObject.FindGameObjectsWithTag ("FlockBoid");
 
 		bestPos = new float[boids.Length,3]; //x,y,dist
 		dists = new float[boids.Length,3]; //x,y,dist
 		//set an initial position and velocity for each boid
 		Vector3 pos = new Vector3(0f,0f,0f);
+
+
 		for (int i = 0; i < boids.Length; i++) {
 			pos = Camera.main.ScreenToWorldPoint (new Vector3 (Random.Range (0.0F, Screen.width), Random.Range (0.0F, Screen.height), 0));
 			pos.z = 0f;
@@ -304,6 +321,14 @@ public class BoidsScript : MonoBehaviour {
             dists[i, 0] = boids[i].transform.position.x;
             dists[i, 1] = boids[i].transform.position.y;
             dists[i, 2] = Vector3.Distance(mousePos, boids[i].transform.position);
+        }
+    }
+
+    public void Spawn()
+    {
+        for (int j = 0; j < maxBoid; j++)
+        {
+            Instantiate(prefab, new Vector3(1.5f, 7f, 0), Quaternion.identity);
         }
     }
 

@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114692490828192550}
   - component: {fileID: 114536022289770490}
   m_Layer: 8
-  m_Name: Ladybug (1)
+  m_Name: Ladybug
   m_TagString: FlockBoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

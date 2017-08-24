@@ -19,37 +19,31 @@ public class RespawnTimer : MonoBehaviour
 
     void Start()
     {
-        //  Accesses AppliedSettings variables
-        Settings = GameObject.Find("AppliedSettings").GetComponent<GameSettings>();
-        switch (algoType)
-        {
-            // red algo
-            case 1:
-                respawnTime = Settings.rSpawn;
-                respawnRef = Settings.rSpawn;
-                randAddRespawn = Settings.rRand;
-                break;
-            // blue algo
-            case 2:
-                respawnTime = Settings.bSpawn;
-                respawnRef = Settings.bSpawn;
-                randAddRespawn = Settings.bRand;
-                break;
+        ////  Accesses AppliedSettings variables     
+        //switch (algoType)
+        //{
+        //    // red algo
+        //    case 1:
+        //        respawnTime = Settings.rSpawn;
+        //        respawnRef = Settings.rSpawn;
+        //        randAddRespawn = Settings.rRand;
+        //        break;
+        //    // blue algo
+        //    case 2:
+        //        respawnTime = Settings.bSpawn;
+        //        respawnRef = Settings.bSpawn;
+        //        randAddRespawn = Settings.bRand;
+        //        break;
 
-            // green algo
-            case 3:
-                respawnTime = Settings.gSpawn;
-                respawnRef = Settings.gSpawn;
-                randAddRespawn = Settings.gRand;
-                break;
+        //    // green algo
+        //    case 3:
+        //        respawnTime = Settings.gSpawn;
+        //        respawnRef = Settings.gSpawn;
+        //        randAddRespawn = Settings.gRand;
+        //        break;
 
-            // yellow algo
-            case 4:
-                respawnTime = Settings.ySpawn;
-                respawnRef = Settings.ySpawn;
-                randAddRespawn = Settings.yRand;
-                break;
-        }
+       
+        //}
         //Settings.GetComponent<>
         // random respawn intiate, add onto respawnTime so more natural respawn        
         randAdd = Random.Range(1, randAddRespawn + 1);
