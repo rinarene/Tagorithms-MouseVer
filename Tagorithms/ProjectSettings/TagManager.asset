@@ -11,6 +11,9 @@ TagManager:
   - TimerBar
   - Scripts
   - HealthBar
+  - RadioButton
+  - Question
+  - ConfirmButton
   layers:
   - Default
   - TransparentFX
