@@ -6,21 +6,25 @@ using System.Timers;
 public class flockTimer : MonoBehaviour {
 
 	System.Timers.Timer LeTimer;
-	float timeLeft = 60f;
+	float timeLeft = 1f;
     public float timeTest = 0.2f;
 	private timerBar barScript;
     private ScoreScript scoreScript;
     // Use this for initialization
 
-    void elapsed(object sender, ElapsedEventArgs e) {
-		//decrease time left (working in 1/5 of a second)
-		timeLeft = timeLeft - timeTest;
+    float currentTime;
+    float startTime;
 
-		//update time bar
-		barScript.percent = timeLeft/60f;
-	}
 
-	void Start () {
+    //   void elapsed(object sender, ElapsedEventArgs e) {
+    //	//decrease time left (working in 1/5 of a second)
+    //	timeLeft = timeLeft - timeTest;
+
+    //	//update time bar
+    //	barScript.percent = timeLeft/60f;
+    //}
+
+    void Start () {
 
 		GameObject timerObject = GameObject.FindWithTag ("TimerBar");
 		if (timerObject != null)
@@ -38,19 +42,26 @@ public class flockTimer : MonoBehaviour {
             scoreScript = scoreObject.GetComponent<ScoreScript>();
         }
 
-        //Initialize timer with 1/5 second intervals
-        LeTimer = new System.Timers.Timer (200);
-		LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
+        startTime = Time.time;
 
-		LeTimer.Start();
-	}
+        //Initialize timer with 1/5 second intervals
+        //      LeTimer = new System.Timers.Timer (200);
+        //LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
+
+        //LeTimer.Start();
+    }
 		
 	void Update () {
-        if (timeLeft <= 0)
-        {
-			//end screen
-			SceneManager.LoadScene ("FlockEnd");
-		}
+  //      if (timeLeft <= 0)
+  //      {
+		//	//end screen
+		//	SceneManager.LoadScene ("FlockEnd");
+		//}
 
-	}
+        currentTime = Time.time;
+        if (currentTime > startTime + timeLeft)
+            SceneManager.LoadScene("FlockEnd");
+        barScript.percent = (startTime + timeLeft - currentTime) / timeLeft;
+
+    }
 }

@@ -6,18 +6,21 @@ using System.Timers;
 public class swarmTimer : MonoBehaviour {
 
 	System.Timers.Timer LeTimer;
-	float timeLeft = 60f;
+	float timeLeft = 1f;
     public float timeTest = 0.2f;
 	private timerBar barScript;
     private ScoreScript scoreScript;
 
-    void elapsed(object sender, ElapsedEventArgs e) {
-		//decrease time left (working in 1/5 of a second)
-		timeLeft = timeLeft - timeTest;
+    float currentTime;
+    float startTime;
 
-		//update time bar
-		barScript.percent = timeLeft/60f;
-	}
+ //   void elapsed(object sender, ElapsedEventArgs e) {
+	//	//decrease time left (working in 1/5 of a second)
+	//	timeLeft = timeLeft - timeTest;
+
+	//	//update time bar
+	//	barScript.percent = timeLeft/60f;
+	//}
 
 	void Start () {
 
@@ -36,19 +39,25 @@ public class swarmTimer : MonoBehaviour {
             scoreScript = scoreObject.GetComponent<ScoreScript>();
         }
 
-        //Initialize timer with 1/5 second intervals
-        LeTimer = new System.Timers.Timer (200);
-		LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
+        startTime = Time.time;
+        
+  //      //Initialize timer with 1/5 second intervals
+  //      LeTimer = new System.Timers.Timer (200);
+		//LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
 
-		LeTimer.Start();
+		//LeTimer.Start();
 	}       
 		
 	void Update () {
-        if (timeLeft <= 0)
-        {
-			//end screen
-			SceneManager.LoadScene ("SwarmEnd");
-		}
+  //      if (timeLeft <= 0)
+  //      {
+		//	//end screen
+		//	SceneManager.LoadScene ("SwarmEnd");
+		//}
 
-	}
+        currentTime = Time.time;
+        if (currentTime > startTime + timeLeft)
+            SceneManager.LoadScene("SwarmEnd");
+        barScript.percent = (startTime + timeLeft - currentTime) / timeLeft;
+    }
 }

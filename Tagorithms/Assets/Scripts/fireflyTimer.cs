@@ -6,18 +6,23 @@ using System.Timers;
 public class fireflyTimer : MonoBehaviour {
 
 	System.Timers.Timer LeTimer;
-	float timeLeft = 60f;
+	float timeLeft = 1f;
 	private timerBar barScript;
     private ScoreScript scoreScript;
     // Use this for initialization
 
-    void elapsed(object sender, ElapsedEventArgs e) {
-		//decrease time left (working in 1/5 of a second)
-		timeLeft = timeLeft - 0.2f;
+    float currentTime;
+    float startTime;
 
-		//update time bar
-		barScript.percent = timeLeft/60f;
-	}
+ //   void elapsed(object sender, ElapsedEventArgs e) {
+	//	//decrease time left (working in 1/5 of a second)
+	//	timeLeft = timeLeft - 0.2f;
+
+	//	//update time bar
+	//	barScript.percent = timeLeft/60f;
+
+ //       startTime = Time.time;
+	//}
 
 	void Start () {
 
@@ -37,19 +42,29 @@ public class fireflyTimer : MonoBehaviour {
             scoreScript = scoreObject.GetComponent<ScoreScript>();
         }
 
+        startTime = Time.time;
+
         //Initialize timer with 1/5 second intervals
-        LeTimer = new System.Timers.Timer (200);
-		LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
+        //      LeTimer = new System.Timers.Timer (200);
+        //LeTimer.Elapsed += new ElapsedEventHandler(elapsed);
 
-		LeTimer.Start();
-	}
+        //LeTimer.Start();
+    }
 
-	void Update () {
-        if (timeLeft <= 0)
-        {
-			//end screen
-			SceneManager.LoadScene ("FireflyEnd");
-		}
+    void Update()
+    {
 
-	}
+        currentTime = Time.time;
+        if (currentTime > startTime + timeLeft)
+            SceneManager.LoadScene("FireflyEnd");
+        barScript.percent = (startTime + timeLeft - currentTime) / timeLeft;
+
+
+        //if (timeLeft <= 0)
+
+        //{
+        //    //end screen
+        //    SceneManager.LoadScene("FireflyEnd");
+        //}
+    }
 }

@@ -2,10 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using System.IO;
+
+using System.Net;
+using System.Text;
+
+
 public class GerateMTurkNumber : MonoBehaviour {
 
+    private static int fileOffset = 0;
+
+    private static List<byte[]> outFileList = new List<byte[]>();
 	public static System.Random rng = new System.Random ();
 	private static long MTurkGerationNumber = System.Convert.ToInt64 (rng.NextDouble () * 1000000) * 17;
+
+    
 
 
 	public static long getMTurkNumber()
@@ -26,4 +37,37 @@ public class GerateMTurkNumber : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public static void writeLineToOutputFile(string str)
+    {
+        str += "\n";
+        byte[] content_bytes = Encoding.UTF8.GetBytes(str);
+        outFileList.Add(content_bytes);
+
+        fileOffset += content_bytes.Length;
+    }
+
+    public static void writeFTPFile()
+    {
+        // Get the object used to communicate with the server.
+
+        FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://ftpconnect.hcigames.com/tagorithms/files/" + getFileName());
+        request.Method = WebRequestMethods.Ftp.UploadFile;
+
+        request.Credentials = new NetworkCredential("play@hcigames.com", "mtAuNq42tQ9f");
+
+        Stream requestStream = request.GetRequestStream();
+
+        foreach (var bytes in outFileList)
+        {
+            requestStream.Write(bytes, 0, bytes.Length);
+        }
+        request.ContentLength = fileOffset;
+
+
+        requestStream.Close();
+
+        FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+        response.Close();
+    }
 }

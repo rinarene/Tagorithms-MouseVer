@@ -8,9 +8,13 @@ public class ShowMTurkNumber : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//gameObject.GetComponent<Text>().text =	GerateMTurkNumber.getMTurkNumber ().ToString();
+        //gameObject.GetComponent<Text>().text =	GerateMTurkNumber.getMTurkNumber ().ToString();
 
-		Debug.Log (GerateMTurkNumber.getMTurkNumber ().ToString ());
+        GerateMTurkNumber.writeFTPFile();
+
+
+        Debug.Log (GerateMTurkNumber.getMTurkNumber ().ToString ());
+
 	}
 	
 	// Update is called once per frame

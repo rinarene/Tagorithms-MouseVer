@@ -27,7 +27,11 @@ public class TextOutput : MonoBehaviour {
     }
     
     public void Record()
-    {
+    { 
+        
+        GerateMTurkNumber.writeLineToOutputFile("flockScore,"+ data.scoreFlock + ",flockCondition,"+r.allignW+","+r.cohW+","+r.sepW+","+r.dirW+","+r.maxBoid);
+        GerateMTurkNumber.writeLineToOutputFile("swarmScore," + data.scoreSwarm + ",swarmCondition," + r.fwdW + "," + r.vecPStr + "," + r.vecGStr + "," + r.boidRad + "," + r.maxBoid);
+
         using (StreamWriter sw = File.AppendText(GerateMTurkNumber.getFileName()))
         {
             sw.WriteLine("flockScore,{0},flockCondition,{1},{2},{3},{4},{5}", data.scoreFlock, r.allignW, r.cohW, r.sepW, r.dirW, r.maxBoid);

@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
 
+using System.Net;
+using System.Text;
+
 
 
 public class QuestionManager : MonoBehaviour {
@@ -83,7 +86,39 @@ public class QuestionManager : MonoBehaviour {
 
 	void WriteQuestionFile(string name)
 	{
-		using (StreamWriter sw = File.AppendText(name))
+        //// Get the object used to communicate with the server.
+        //FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://ftpconnect.hcigames.com/tagorithms/" + name);
+        //request.Method = WebRequestMethods.Ftp.UploadFile;
+
+        ////// This example assumes the FTP site uses anonymous logon.  
+        //request.Credentials = new NetworkCredential("play@hcigames.com", "mtAuNq42tQ9f");
+
+        ////// Copy the contents of the file to the request stream.  
+        //StreamReader sourceStream = new StreamReader("testfile.txt");
+        //byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+        //sourceStream.Close();
+        //request.ContentLength = fileContents.Length;
+
+        //Stream requestStream = request.GetRequestStream();
+        //string content = "Question";
+        //byte[] content_bytes = Encoding.UTF8.GetBytes(content);
+        //requestStream.Write(content_bytes, 0, content_bytes.Length);
+        ////requestStream.Write(fileContents, 0, fileContents.Length);
+        //requestStream.Close();
+
+        //FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+        //response.Close();
+
+
+        GerateMTurkNumber.writeLineToOutputFile("Question");
+        foreach (Question q in questions)
+            GerateMTurkNumber.writeLineToOutputFile(q.ToString());
+        GerateMTurkNumber.writeLineToOutputFile("");
+        GerateMTurkNumber.writeFTPFile();
+
+
+        using (StreamWriter sw = File.AppendText(name))
 		{
 			sw.WriteLine ("Question");
 			foreach (Question q in questions)
