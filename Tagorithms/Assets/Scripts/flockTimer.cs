@@ -6,7 +6,7 @@ using System.Timers;
 public class flockTimer : MonoBehaviour {
 
 	System.Timers.Timer LeTimer;
-	float timeLeft = 1f;
+	float timeLeft = 20f;
     public float timeTest = 0.2f;
 	private timerBar barScript;
     private ScoreScript scoreScript;

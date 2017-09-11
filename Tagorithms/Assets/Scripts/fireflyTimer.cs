@@ -6,7 +6,7 @@ using System.Timers;
 public class fireflyTimer : MonoBehaviour {
 
 	System.Timers.Timer LeTimer;
-	float timeLeft = 1f;
+	float timeLeft = 20f;
 	private timerBar barScript;
     private ScoreScript scoreScript;
     // Use this for initialization

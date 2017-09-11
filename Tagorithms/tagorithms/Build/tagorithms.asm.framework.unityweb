@@ -1520,7 +1520,7 @@ function _emscripten_asm_const_v(code) {
  return ASM_CONSTS[code]();
 }
 STATIC_BASE = 8;
-STATICTOP = Runtime.alignMemory(STATIC_BASE, 16) + 1779040;
+STATICTOP = Runtime.alignMemory(STATIC_BASE, 16) + 1750112;
 __ATINIT__.push({
  func: (function() {
   __GLOBAL__sub_I_runtime_ai_internal_builder_lump_cpp();
@@ -2115,7 +2115,7 @@ __ATINIT__.push({
  })
 }, {
  func: (function() {
-  __GLOBAL__sub_I_Thread_cpp_8070();
+  __GLOBAL__sub_I_Thread_cpp_42829();
  })
 }, {
  func: (function() {
@@ -2131,11 +2131,15 @@ __ATINIT__.push({
  })
 }, {
  func: (function() {
-  __GLOBAL__sub_I_Assembly_cpp_8338();
+  __GLOBAL__sub_I_Assembly_cpp_43123();
  })
 }, {
  func: (function() {
   __GLOBAL__sub_I_MemoryMappedFile_cpp();
+ })
+}, {
+ func: (function() {
+  __GLOBAL__sub_I_Il2CppCodeRegistration_cpp();
  })
 }, {
  func: (function() {
@@ -2144,10 +2148,6 @@ __ATINIT__.push({
 }, {
  func: (function() {
   __GLOBAL__sub_I_Error_cpp();
- })
-}, {
- func: (function() {
-  __GLOBAL__sub_I_Il2CppCodeRegistration_cpp();
  })
 });
 memoryInitializer = "build.js.mem";
@@ -7885,134 +7885,6 @@ function ___syscall4(which, varargs) {
   return -e.errno;
  }
 }
-var DLFCN = {
- error: null,
- errorMsg: null,
- loadedLibs: {},
- loadedLibNames: {}
-};
-var _environ = STATICTOP;
-STATICTOP += 16;
-function ___buildEnvironment(env) {
- var MAX_ENV_VALUES = 64;
- var TOTAL_ENV_SIZE = 1024;
- var poolPtr;
- var envPtr;
- if (!___buildEnvironment.called) {
-  ___buildEnvironment.called = true;
-  ENV["USER"] = ENV["LOGNAME"] = "web_user";
-  ENV["PATH"] = "/";
-  ENV["PWD"] = "/";
-  ENV["HOME"] = "/home/web_user";
-  ENV["LANG"] = "C";
-  ENV["_"] = Module["thisProgram"];
-  poolPtr = allocate(TOTAL_ENV_SIZE, "i8", ALLOC_STATIC);
-  envPtr = allocate(MAX_ENV_VALUES * 4, "i8*", ALLOC_STATIC);
-  HEAP32[envPtr >> 2] = poolPtr;
-  HEAP32[_environ >> 2] = envPtr;
- } else {
-  envPtr = HEAP32[_environ >> 2];
-  poolPtr = HEAP32[envPtr >> 2];
- }
- var strings = [];
- var totalSize = 0;
- for (var key in env) {
-  if (typeof env[key] === "string") {
-   var line = key + "=" + env[key];
-   strings.push(line);
-   totalSize += line.length;
-  }
- }
- if (totalSize > TOTAL_ENV_SIZE) {
-  throw new Error("Environment size exceeded TOTAL_ENV_SIZE!");
- }
- var ptrSize = 4;
- for (var i = 0; i < strings.length; i++) {
-  var line = strings[i];
-  writeAsciiToMemory(line, poolPtr);
-  HEAP32[envPtr + i * ptrSize >> 2] = poolPtr;
-  poolPtr += line.length + 1;
- }
- HEAP32[envPtr + strings.length * ptrSize >> 2] = 0;
-}
-var ENV = {};
-function _dlopen(filename, flag) {
- abort("To use dlopen, you need to use Emscripten's linking support, see https://github.com/kripken/emscripten/wiki/Linking");
- var searchpaths = [];
- if (filename === 0) {
-  filename = "__self__";
- } else {
-  var strfilename = Pointer_stringify(filename);
-  var isValidFile = (function(filename) {
-   var target = FS.findObject(filename);
-   return target && !target.isFolder && !target.isDevice;
-  });
-  if (isValidFile(strfilename)) {
-   filename = strfilename;
-  } else {
-   if (ENV["LD_LIBRARY_PATH"]) {
-    searchpaths = ENV["LD_LIBRARY_PATH"].split(":");
-   }
-   for (var ident in searchpaths) {
-    var searchfile = PATH.join2(searchpaths[ident], strfilename);
-    if (isValidFile(searchfile)) {
-     filename = searchfile;
-     break;
-    }
-   }
-  }
- }
- if (DLFCN.loadedLibNames[filename]) {
-  var handle = DLFCN.loadedLibNames[filename];
-  DLFCN.loadedLibs[handle].refcount++;
-  return handle;
- }
- if (filename === "__self__") {
-  var handle = -1;
-  var lib_module = Module;
-  var cached_functions = {};
- } else {
-  var target = FS.findObject(filename);
-  if (!target || target.isFolder || target.isDevice) {
-   DLFCN.errorMsg = "Could not find dynamic lib: " + filename;
-   return 0;
-  }
-  FS.forceLoadFile(target);
-  var lib_module;
-  try {
-   var lib_data = FS.readFile(filename, {
-    encoding: "utf8"
-   });
-   lib_module = eval(lib_data)(Runtime.alignFunctionTables(), Module);
-  } catch (e) {
-   Module.printErr("Error in loading dynamic library: " + e);
-   DLFCN.errorMsg = "Could not evaluate dynamic lib: " + filename + "\n" + e;
-   return 0;
-  }
-  var handle = 1;
-  for (var key in DLFCN.loadedLibs) {
-   if (DLFCN.loadedLibs.hasOwnProperty(key)) handle++;
-  }
-  if (flag & 256) {
-   for (var ident in lib_module) {
-    if (lib_module.hasOwnProperty(ident)) {
-     if (ident[0] == "_") {
-      Module[ident] = lib_module[ident];
-     }
-    }
-   }
-  }
-  var cached_functions = {};
- }
- DLFCN.loadedLibs[handle] = {
-  refcount: 1,
-  name: filename,
-  module: lib_module,
-  cached_functions: cached_functions
- };
- DLFCN.loadedLibNames[filename] = handle;
- return handle;
-}
 function ___syscall6(which, varargs) {
  SYSCALLS.varargs = varargs;
  try {
@@ -8406,30 +8278,6 @@ function _sysconf(name) {
  ___setErrNo(ERRNO_CODES.EINVAL);
  return -1;
 }
-function _dlsym(handle, symbol) {
- symbol = Pointer_stringify(symbol);
- if (!DLFCN.loadedLibs[handle]) {
-  DLFCN.errorMsg = "Tried to dlsym() from an unopened handle: " + handle;
-  return 0;
- } else {
-  var lib = DLFCN.loadedLibs[handle];
-  symbol = "_" + symbol;
-  if (lib.cached_functions.hasOwnProperty(symbol)) {
-   return lib.cached_functions[symbol];
-  }
-  if (!lib.module.hasOwnProperty(symbol)) {
-   DLFCN.errorMsg = 'Tried to lookup unknown symbol "' + symbol + '" in dynamic lib: ' + lib.name;
-   return 0;
-  } else {
-   var result = lib.module[symbol];
-   if (typeof result == "function") {
-    result = Runtime.addFunction(result);
-    lib.cached_functions = result;
-   }
-   return result;
-  }
- }
-}
 function _emscripten_glMatrixMode() {
  throw "Legacy GL function (glMatrixMode) called. If you want legacy GL emulation, you need to compile with -s LEGACY_GL_EMULATION=1 to enable legacy GL emulation.";
 }
@@ -8629,6 +8477,51 @@ function ___cxa_pure_virtual() {
  ABORT = true;
  throw "Pure virtual function called!";
 }
+var _environ = STATICTOP;
+STATICTOP += 16;
+function ___buildEnvironment(env) {
+ var MAX_ENV_VALUES = 64;
+ var TOTAL_ENV_SIZE = 1024;
+ var poolPtr;
+ var envPtr;
+ if (!___buildEnvironment.called) {
+  ___buildEnvironment.called = true;
+  ENV["USER"] = ENV["LOGNAME"] = "web_user";
+  ENV["PATH"] = "/";
+  ENV["PWD"] = "/";
+  ENV["HOME"] = "/home/web_user";
+  ENV["LANG"] = "C";
+  ENV["_"] = Module["thisProgram"];
+  poolPtr = allocate(TOTAL_ENV_SIZE, "i8", ALLOC_STATIC);
+  envPtr = allocate(MAX_ENV_VALUES * 4, "i8*", ALLOC_STATIC);
+  HEAP32[envPtr >> 2] = poolPtr;
+  HEAP32[_environ >> 2] = envPtr;
+ } else {
+  envPtr = HEAP32[_environ >> 2];
+  poolPtr = HEAP32[envPtr >> 2];
+ }
+ var strings = [];
+ var totalSize = 0;
+ for (var key in env) {
+  if (typeof env[key] === "string") {
+   var line = key + "=" + env[key];
+   strings.push(line);
+   totalSize += line.length;
+  }
+ }
+ if (totalSize > TOTAL_ENV_SIZE) {
+  throw new Error("Environment size exceeded TOTAL_ENV_SIZE!");
+ }
+ var ptrSize = 4;
+ for (var i = 0; i < strings.length; i++) {
+  var line = strings[i];
+  writeAsciiToMemory(line, poolPtr);
+  HEAP32[envPtr + i * ptrSize >> 2] = poolPtr;
+  poolPtr += line.length + 1;
+ }
+ HEAP32[envPtr + strings.length * ptrSize >> 2] = 0;
+}
+var ENV = {};
 function _unsetenv(name) {
  if (name === 0) {
   ___setErrNo(ERRNO_CODES.EINVAL);
@@ -10013,15 +9906,9 @@ function ___syscall54(which, varargs) {
 function _glColorMask(red, green, blue, alpha) {
  GLctx.colorMask(!!red, !!green, !!blue, !!alpha);
 }
-function _glDeleteTextures(n, textures) {
- for (var i = 0; i < n; i++) {
-  var id = HEAP32[textures + i * 4 >> 2];
-  var texture = GL.textures[id];
-  if (!texture) continue;
-  GLctx.deleteTexture(texture);
-  texture.name = 0;
-  GL.textures[id] = null;
- }
+function _emscripten_glUniform4f(location, v0, v1, v2, v3) {
+ location = GL.uniforms[location];
+ GLctx.uniform4f(location, v0, v1, v2, v3);
 }
 function _glStencilOpSeparate(x0, x1, x2, x3) {
  GLctx["stencilOpSeparate"](x0, x1, x2, x3);
@@ -10168,6 +10055,16 @@ function _glCullFace(x0) {
 function _emscripten_glColorPointer() {
  Module["printErr"]("missing function: emscripten_glColorPointer");
  abort(-1);
+}
+function _glDeleteTextures(n, textures) {
+ for (var i = 0; i < n; i++) {
+  var id = HEAP32[textures + i * 4 >> 2];
+  var texture = GL.textures[id];
+  if (!texture) continue;
+  GLctx.deleteTexture(texture);
+  texture.name = 0;
+  GL.textures[id] = null;
+ }
 }
 function _emscripten_glNormalPointer() {
  Module["printErr"]("missing function: emscripten_glNormalPointer");
@@ -12277,10 +12174,6 @@ function _glUniformMatrix3fv(location, count, transpose, value) {
   view = HEAPF32.subarray(value >> 2, value + count * 36 >> 2);
  }
  GLctx.uniformMatrix3fv(location, !!transpose, view);
-}
-function _emscripten_glUniform4f(location, v0, v1, v2, v3) {
- location = GL.uniforms[location];
- GLctx.uniform4f(location, v0, v1, v2, v3);
 }
 function _emscripten_webgl_create_context(target, attributes) {
  var contextAttributes = {};
@@ -16611,7 +16504,6 @@ Module.asmLibraryArg = {
  "_glReadBuffer": _glReadBuffer,
  "___syscall91": ___syscall91,
  "_pthread_once": _pthread_once,
- "_dlopen": _dlopen,
  "_glDrawArraysInstanced": _glDrawArraysInstanced,
  "_JS_Sound_SetListenerOrientation": _JS_Sound_SetListenerOrientation,
  "_emscripten_glGetAttribLocation": _emscripten_glGetAttribLocation,
@@ -16823,7 +16715,6 @@ Module.asmLibraryArg = {
  "_JS_SystemInfo_GetCurrentCanvasHeight": _JS_SystemInfo_GetCurrentCanvasHeight,
  "_JS_WebRequest_GetResponseHeaders": _JS_WebRequest_GetResponseHeaders,
  "_emscripten_glReleaseShaderCompiler": _emscripten_glReleaseShaderCompiler,
- "_dlsym": _dlsym,
  "__ZN4FMOD13DSPConnection6setMixEf": __ZN4FMOD13DSPConnection6setMixEf,
  "_flock": _flock,
  "_SDL_RWFromFile": _SDL_RWFromFile,
@@ -17448,6 +17339,12 @@ asm["__GLOBAL__sub_I_runtime_misc3_lump_cpp"] = (function() {
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return real___GLOBAL__sub_I_runtime_misc3_lump_cpp.apply(null, arguments);
 });
+var real___GLOBAL__sub_I_Assembly_cpp_43123 = asm["__GLOBAL__sub_I_Assembly_cpp_43123"];
+asm["__GLOBAL__sub_I_Assembly_cpp_43123"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return real___GLOBAL__sub_I_Assembly_cpp_43123.apply(null, arguments);
+});
 var real___GLOBAL__sub_I_runtime_core_callbacks_lump_cpp = asm["__GLOBAL__sub_I_runtime_core_callbacks_lump_cpp"];
 asm["__GLOBAL__sub_I_runtime_core_callbacks_lump_cpp"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
@@ -17531,12 +17428,6 @@ asm["__GLOBAL__sub_I_artifacts_generated_webgl_runtime5_lump_cpp"] = (function()
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return real___GLOBAL__sub_I_artifacts_generated_webgl_runtime5_lump_cpp.apply(null, arguments);
-});
-var real___GLOBAL__sub_I_Thread_cpp_8070 = asm["__GLOBAL__sub_I_Thread_cpp_8070"];
-asm["__GLOBAL__sub_I_Thread_cpp_8070"] = (function() {
- assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
- assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
- return real___GLOBAL__sub_I_Thread_cpp_8070.apply(null, arguments);
 });
 var real__llvm_cttz_i32 = asm["_llvm_cttz_i32"];
 asm["_llvm_cttz_i32"] = (function() {
@@ -17639,6 +17530,12 @@ asm["_llvm_bswap_i32"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return real__llvm_bswap_i32.apply(null, arguments);
+});
+var real___GLOBAL__sub_I_Thread_cpp_42829 = asm["__GLOBAL__sub_I_Thread_cpp_42829"];
+asm["__GLOBAL__sub_I_Thread_cpp_42829"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return real___GLOBAL__sub_I_Thread_cpp_42829.apply(null, arguments);
 });
 var real___GLOBAL__sub_I_String_cpp = asm["__GLOBAL__sub_I_String_cpp"];
 asm["__GLOBAL__sub_I_String_cpp"] = (function() {
@@ -18030,12 +17927,6 @@ asm["__GLOBAL__sub_I_runtime_particlesystem_lump_cpp"] = (function() {
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return real___GLOBAL__sub_I_runtime_particlesystem_lump_cpp.apply(null, arguments);
 });
-var real___GLOBAL__sub_I_Assembly_cpp_8338 = asm["__GLOBAL__sub_I_Assembly_cpp_8338"];
-asm["__GLOBAL__sub_I_Assembly_cpp_8338"] = (function() {
- assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
- assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
- return real___GLOBAL__sub_I_Assembly_cpp_8338.apply(null, arguments);
-});
 var real____udivdi3 = asm["___udivdi3"];
 asm["___udivdi3"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
@@ -18379,6 +18270,7 @@ var _SetFullscreen = Module["_SetFullscreen"] = asm["_SetFullscreen"];
 var _main = Module["_main"] = asm["_main"];
 var __GLOBAL__sub_I_runtime_virtualfilesystem_archivefilesystem_lump_cpp = Module["__GLOBAL__sub_I_runtime_virtualfilesystem_archivefilesystem_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_virtualfilesystem_archivefilesystem_lump_cpp"];
 var __GLOBAL__sub_I_runtime_misc3_lump_cpp = Module["__GLOBAL__sub_I_runtime_misc3_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_misc3_lump_cpp"];
+var __GLOBAL__sub_I_Assembly_cpp_43123 = Module["__GLOBAL__sub_I_Assembly_cpp_43123"] = asm["__GLOBAL__sub_I_Assembly_cpp_43123"];
 var __GLOBAL__sub_I_runtime_core_callbacks_lump_cpp = Module["__GLOBAL__sub_I_runtime_core_callbacks_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_core_callbacks_lump_cpp"];
 var __GLOBAL__sub_I_runtime_camera3_lump_cpp = Module["__GLOBAL__sub_I_runtime_camera3_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_camera3_lump_cpp"];
 var __GLOBAL__sub_I_runtime_ai_internal_crowd_lump_cpp = Module["__GLOBAL__sub_I_runtime_ai_internal_crowd_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_ai_internal_crowd_lump_cpp"];
@@ -18393,7 +18285,6 @@ var _llvm_ctlz_i64 = Module["_llvm_ctlz_i64"] = asm["_llvm_ctlz_i64"];
 var __GLOBAL__sub_I_runtime_physics2d_lump_cpp = Module["__GLOBAL__sub_I_runtime_physics2d_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_physics2d_lump_cpp"];
 var __GLOBAL__sub_I_runtime_graphics_lod_lump_cpp = Module["__GLOBAL__sub_I_runtime_graphics_lod_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_graphics_lod_lump_cpp"];
 var __GLOBAL__sub_I_artifacts_generated_webgl_runtime5_lump_cpp = Module["__GLOBAL__sub_I_artifacts_generated_webgl_runtime5_lump_cpp"] = asm["__GLOBAL__sub_I_artifacts_generated_webgl_runtime5_lump_cpp"];
-var __GLOBAL__sub_I_Thread_cpp_8070 = Module["__GLOBAL__sub_I_Thread_cpp_8070"] = asm["__GLOBAL__sub_I_Thread_cpp_8070"];
 var _llvm_cttz_i32 = Module["_llvm_cttz_i32"] = asm["_llvm_cttz_i32"];
 var __GLOBAL__sub_I_TransformFeedbackSkinning_cpp = Module["__GLOBAL__sub_I_TransformFeedbackSkinning_cpp"] = asm["__GLOBAL__sub_I_TransformFeedbackSkinning_cpp"];
 var __GLOBAL__sub_I_DirectorManager_cpp = Module["__GLOBAL__sub_I_DirectorManager_cpp"] = asm["__GLOBAL__sub_I_DirectorManager_cpp"];
@@ -18411,6 +18302,7 @@ var __GLOBAL__sub_I_MemoryMappedFile_cpp = Module["__GLOBAL__sub_I_MemoryMappedF
 var __GLOBAL__sub_I_runtime_particlesystem_modules3_lump_cpp = Module["__GLOBAL__sub_I_runtime_particlesystem_modules3_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_particlesystem_modules3_lump_cpp"];
 var __GLOBAL__sub_I_runtime_graphics_billboard_lump_cpp = Module["__GLOBAL__sub_I_runtime_graphics_billboard_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_graphics_billboard_lump_cpp"];
 var _llvm_bswap_i32 = Module["_llvm_bswap_i32"] = asm["_llvm_bswap_i32"];
+var __GLOBAL__sub_I_Thread_cpp_42829 = Module["__GLOBAL__sub_I_Thread_cpp_42829"] = asm["__GLOBAL__sub_I_Thread_cpp_42829"];
 var __GLOBAL__sub_I_String_cpp = Module["__GLOBAL__sub_I_String_cpp"] = asm["__GLOBAL__sub_I_String_cpp"];
 var __GLOBAL__sub_I_runtime_math_random_lump_cpp = Module["__GLOBAL__sub_I_runtime_math_random_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_math_random_lump_cpp"];
 var __GLOBAL__sub_I_Reflection_cpp = Module["__GLOBAL__sub_I_Reflection_cpp"] = asm["__GLOBAL__sub_I_Reflection_cpp"];
@@ -18478,7 +18370,6 @@ var __GLOBAL__sub_I_runtime_gfxdevice2_lump_cpp = Module["__GLOBAL__sub_I_runtim
 var _SendMessage = Module["_SendMessage"] = asm["_SendMessage"];
 var __GLOBAL__sub_I_runtime_animation_director_lump_cpp = Module["__GLOBAL__sub_I_runtime_animation_director_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_animation_director_lump_cpp"];
 var __GLOBAL__sub_I_runtime_particlesystem_lump_cpp = Module["__GLOBAL__sub_I_runtime_particlesystem_lump_cpp"] = asm["__GLOBAL__sub_I_runtime_particlesystem_lump_cpp"];
-var __GLOBAL__sub_I_Assembly_cpp_8338 = Module["__GLOBAL__sub_I_Assembly_cpp_8338"] = asm["__GLOBAL__sub_I_Assembly_cpp_8338"];
 var ___udivdi3 = Module["___udivdi3"] = asm["___udivdi3"];
 var __GLOBAL__sub_I_VRDevice_cpp = Module["__GLOBAL__sub_I_VRDevice_cpp"] = asm["__GLOBAL__sub_I_VRDevice_cpp"];
 var __GLOBAL__sub_I_platformdependent_webgl_source_lump_cpp = Module["__GLOBAL__sub_I_platformdependent_webgl_source_lump_cpp"] = asm["__GLOBAL__sub_I_platformdependent_webgl_source_lump_cpp"];
