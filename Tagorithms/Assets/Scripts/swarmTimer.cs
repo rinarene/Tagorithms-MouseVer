@@ -6,7 +6,7 @@ using System.Timers;
 public class swarmTimer : MonoBehaviour {
 
 	System.Timers.Timer LeTimer;
-	float timeLeft = 20f;
+	float timeLeft = 60f;
     public float timeTest = 0.2f;
 	private timerBar barScript;
     private ScoreScript scoreScript;
